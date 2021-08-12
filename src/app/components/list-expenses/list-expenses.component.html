@@ -34,10 +34,11 @@
             </tr>
 		</thead>
         <tbody>
-        <tr  *ngFor="let expense of expenses" >
+        <tr  *ngFor="let expense of expenses | paginate:{ itemsPerPage : 5 , currentPage:p};" >
         <td>{{expense.expense}}</td>
         <td>{{expense.amount | currency: 'INR'}}</td>
     </tr>
 </tbody>
+  <pagination-controls (pageChange) = "p = $event"></pagination-controls>
 </table>
  

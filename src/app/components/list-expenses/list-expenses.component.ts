@@ -11,7 +11,7 @@ import { ExpenseService } from 'src/app/services/expense.service';
 export class ListExpensesComponent implements OnInit {
 
   expenses: Expense[] = [];
-
+  p : any = 1;
   filters = {
     keyword: '',
     sortBy: 'Expense'
